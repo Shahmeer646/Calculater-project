@@ -8,7 +8,7 @@ let object = {
 }
 
 const call = ()=>{
-    console.log("called")
+    // console.log("called")
     a1 = array[0]
     a2 = array[index+1]
     for (let i = 1; i < index; i++) {
@@ -17,8 +17,13 @@ const call = ()=>{
     for (let j = index+2; j <array.length-1; j++) {
           a2 +=array[j] 
         }    
-        console.log(a1,a2)
+        // console.log(a1,a2)
         array = [eval(`${a1} ${sym} ${a2}`)];
+        let num = 4554.454
+        array = [Number(array).toFixed(4)]
+        
+        // console.log(Number(array).toFixed(4))
+        
         document.querySelector("span").innerHTML=array;
 
 }
@@ -43,14 +48,14 @@ function main() {
                      
                     sym =object[key];         
                     index = array.indexOf(sym)
-                    console.log(index)
+                    // console.log(index)
                     call()
                 }
             }
 
         }
     }
-    document.querySelector(".screen").innerHTML = `<span>${array.join("")}</span>`
+    document.querySelector(".screen").innerHTML = `<span>${array.join('')}</span>`
 
     
 }
